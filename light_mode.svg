@@ -43,7 +43,7 @@ text, tspan {white-space: pre;}
 <tspan x="370" y="50">——————</tspan>
 <tspan x="370" y="70" class="keyColor">OS</tspan>: <tspan class="valueColor">Windows 11, iOS</tspan>
 <tspan x="370" y="90" class="keyColor">Uptime</tspan>: <tspan class="valueColor">21 years, 2 months, 6 days</tspan>
-<tspan x="370" y="110" class="keyColor">Host</tspan>: <tspan class="valueColor">Indian Institute of Technology Ropar</tspan><tspan class="commentColor"> #IITRpr</tspan>
+<tspan x="370" y="110" class="keyColor">Host</tspan>: <tspan class="valueColor">Indian Institute of Technology Ropar</tspan><tspan class="commentColor"> #IIT Rpr</tspan>
 <tspan x="370" y="130" class="keyColor">Kernel</tspan>: <tspan class="valueColor">Electrical Engineering and Computer Science</tspan><tspan class="commentColor"> #EECS</tspan>
 <tspan x="370" y="150" class="keyColor">IDE</tspan>: <tspan class="valueColor">IntelliJ IDEA 2021.2.1, VSCode 1.64.0</tspan>
 <tspan x="370" y="190" class="keyColor">Languages</tspan>.<tspan class="keyColor">Programming</tspan>: <tspan class="valueColor">C++, Python, JavaScript, R, Java</tspan>
@@ -53,7 +53,7 @@ text, tspan {white-space: pre;}
 <tspan x="370" y="290" class="keyColor">Hobbies</tspan>.<tspan class="keyColor">Hardware</tspan>: <tspan class="valueColor">Overclocking, Undervolting</tspan>
 <tspan x="370" y="330" class="keyColor">Contact</tspan>:
 <tspan x="370" y="350">——————</tspan>
-<tspan x="370" y="370" class="keyColor">Email</tspan>: <tspan class="valueColor">shashwat2003@gmail.com</tspan>
+<tspan x="370" y="370" class="keyColor">Email</tspan>: <tspan class="valueColor">shashwatsrivastava2021@gmail.com</tspan>
 <tspan x="370" y="390" class="keyColor">LinkedIn</tspan>: <tspan class="valueColor">shashwat39</tspan>
 <tspan x="370" y="410" class="keyColor">Discord</tspan>: <tspan class="valueColor">kaneki5978</tspan>
 <tspan x="370" y="450" class="keyColor">GitHub Stats</tspan>:
