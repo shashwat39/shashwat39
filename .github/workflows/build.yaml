@@ -30,6 +30,8 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           USER_NAME: ${{ secrets.USER_NAME }}
         run: python today.py
+      - name: Debug Remote
+        run: git remote -v
       - name: Commit
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
