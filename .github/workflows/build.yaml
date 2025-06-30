@@ -41,5 +41,5 @@ jobs:
           git add .
           git diff
           git commit -m "Updated README" -a || echo "No changes to commit"
-          git remote set-url origin https://shashwat39:${ACCESS_TOKEN}@github.com/shashwat39/shashwat39.git
+          git remote set-url origin https://shashwat39:${GITHUB_TOKEN}@github.com/shashwat39/shashwat39.git
           git push
