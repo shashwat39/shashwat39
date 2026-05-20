@@ -330,15 +330,15 @@ def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib
     svg = minidom.parse(filename)
 
     line_replacements = {
-        'Uptime      : ': age_data,
-        'Repos       : ': repo_data,
-        'Contributed : ': contrib_data,
-        'Commits     : ': commit_data,
-        'Stars       : ': star_data,
-        'Followers   : ': follower_data,
-        'Lines       : ': loc_data[2],
-        'Added       : ': loc_data[0] + '++',
-        'Deleted     : ': loc_data[1] + '--',
+        'Uptime      : ': str(age_data),
+        'Repos       : ': str(repo_data),
+        'Contributed : ': str(contrib_data),
+        'Commits     : ': str(commit_data),
+        'Stars       : ': str(star_data),
+        'Followers   : ': str(follower_data),
+        'Lines       : ': str(loc_data[2]),
+        'Added       : ': str(loc_data[0]) + '++',
+        'Deleted     : ': str(loc_data[1]) + '--',
     }
 
     for tspan in svg.getElementsByTagName('tspan'):
