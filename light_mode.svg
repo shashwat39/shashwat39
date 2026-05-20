@@ -45,7 +45,7 @@ text, tspan {white-space: pre;}
 <tspan x="370" y="90">Uptime      : 22 years, 8 months, 17 days</tspan>
 <tspan x="370" y="110">Host        : Indian Institute of Technology Ropar</tspan>
 <tspan x="370" y="130">Kernel      : Electrical Engineering and Computer Science</tspan>
-<tspan x="370" y="150">Shell       : zsh</tspan>
+<tspan x="370" y="150">Shell       : bash / zsh</tspan>
 <tspan x="370" y="170"/>
 <tspan x="370" y="190">Languages   : C++, Python, JavaScript, Go, R, Java</tspan>
 <tspan x="370" y="210">Markup      : HTML, CSS, JSON, XML, LaTeX, YAML, Markdown</tspan>

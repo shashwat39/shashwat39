@@ -325,29 +325,30 @@ def stars_counter(data):
 
 def svg_overwrite(filename, age_data, commit_data, star_data, repo_data, contrib_data, follower_data, loc_data):
     """
-    Parse SVG files and update named placeholders with live profile data.
+    Parse SVG files and update stat lines by stable text prefixes.
     """
     svg = minidom.parse(filename)
 
-    replacements = {
-        'AGE_PLACEHOLDER': age_data,
-        'REPOS_PLACEHOLDER': repo_data,
-        'CONTRIB_PLACEHOLDER': contrib_data,
-        'COMMITS_PLACEHOLDER': commit_data,
-        'STARS_PLACEHOLDER': star_data,
-        'FOLLOWERS_PLACEHOLDER': follower_data,
-        'LOC_TOTAL_PLACEHOLDER': loc_data[2],
-        'LOC_ADD_PLACEHOLDER': loc_data[0] + '++',
-        'LOC_DEL_PLACEHOLDER': loc_data[1] + '--',
+    line_replacements = {
+        'Uptime      : ': age_data,
+        'Repos       : ': repo_data,
+        'Contributed : ': contrib_data,
+        'Commits     : ': commit_data,
+        'Stars       : ': star_data,
+        'Followers   : ': follower_data,
+        'Lines       : ': loc_data[2],
+        'Added       : ': loc_data[0] + '++',
+        'Deleted     : ': loc_data[1] + '--',
     }
 
     for tspan in svg.getElementsByTagName('tspan'):
         if tspan.firstChild is None:
             continue
         value = tspan.firstChild.data
-        for placeholder, replacement in replacements.items():
-            if placeholder in value:
-                value = value.replace(placeholder, replacement)
+        for prefix, replacement in line_replacements.items():
+            if value.startswith(prefix):
+                value = prefix + replacement
+                break
         tspan.firstChild.data = value
 
     with open(filename, mode='w', encoding='utf-8') as f:
