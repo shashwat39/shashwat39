@@ -52,9 +52,14 @@ def simple_request(func_name, query, variables):
     Returns a request, or raises an Exception if the response does not succeed.
     """
     request = requests.post('https://api.github.com/graphql', json={'query': query, 'variables':variables}, headers=HEADERS)
-    if request.status_code == 200:
-        return request
-    raise Exception(func_name, ' has failed with a', request.status_code, request.text, QUERY_COUNT)
+    if request.status_code != 200:
+        raise Exception(func_name, ' has failed with a', request.status_code, request.text, QUERY_COUNT)
+
+    payload = request.json()
+    if 'errors' in payload or 'data' not in payload:
+        raise Exception(func_name, ' returned invalid GraphQL payload', request.status_code, payload, QUERY_COUNT)
+
+    return request
 
 
 def graph_commits(start_date, end_date):
